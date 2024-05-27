@@ -19,6 +19,11 @@ app.use('/', indexRoutes);
 app.use('/projects', projectRoutes);
 app.use('/volunteers', volunteerRoutes);
 
+// Handle 404 errors
+app.use((req, res, next) => {
+  res.status(404).send('Page not found');
+});
+
 // Start server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
