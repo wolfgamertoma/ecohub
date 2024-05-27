@@ -9,6 +9,14 @@ header {
   padding: 1em;
   color: white;
   text-align: center;
+  position: relative;
+}
+
+header .logo {
+  width: 100px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 
 nav ul {
@@ -28,4 +36,20 @@ nav ul li a {
 
 main {
   padding: 1em;
+}
+
+footer {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+footer .logo-footer {
+  width: 50px;
+  display: block;
+  margin: 0 auto;
 }
