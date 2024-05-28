@@ -5,8 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "build": "echo 'Building...' && npm install",
-    "vercel-build": "npm install"
+    "build": "echo 'Building...' && npm install"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -14,3 +13,4 @@
     "express": "^4.17.1"
   }
 }
+

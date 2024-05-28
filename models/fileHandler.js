@@ -12,6 +12,7 @@ const readData = (fileName) => {
       return [];
     }
     const data = fs.readFileSync(filePath, 'utf8');
+    console.log(`Read data from ${fileName}:`, data);
     return JSON.parse(data);
   } catch (error) {
     console.error(`Error reading file ${fileName}:`, error);
@@ -23,12 +24,14 @@ const writeData = (fileName, data) => {
   const filePath = getFilePath(fileName);
   try {
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
+    console.log(`Written data to ${fileName}:`, JSON.stringify(data, null, 2));
   } catch (error) {
     console.error(`Error writing file ${fileName}:`, error);
   }
 };
 
 module.exports = { readData, writeData };
+
 
 
 
