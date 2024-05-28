@@ -1,18 +1,22 @@
-let volunteers = [];
+const { readData, writeData } = require('./fileHandler');
+const fileName = 'volunteers.json';
 
 class Volunteer {
   static getAll() {
-    return volunteers;
+    return readData(fileName);
   }
 
   static save(volunteer) {
+    const volunteers = readData(fileName);
     volunteers.push(volunteer);
+    writeData(fileName, volunteers);
   }
 
   static reset() {
-    volunteers = [];
+    writeData(fileName, []);
   }
 }
 
 module.exports = Volunteer;
+
 
