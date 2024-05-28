@@ -20,4 +20,11 @@ router.post('/', (req, res) => {
   res.redirect('/volunteers');
 });
 
+// Handle reset volunteers
+router.post('/reset', (req, res) => {
+  Volunteer.reset();
+  res.redirect('/volunteers');
+});
+
 module.exports = router;
+

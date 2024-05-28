@@ -8,6 +8,10 @@ class Volunteer {
   static save(volunteer) {
     volunteers.push(volunteer);
   }
+
+  static reset() {
+    volunteers = [];
+  }
 }
 
 module.exports = Volunteer;

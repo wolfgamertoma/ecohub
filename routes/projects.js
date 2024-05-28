@@ -20,4 +20,10 @@ router.post('/', (req, res) => {
   res.redirect('/projects');
 });
 
+// Handle reset projects
+router.post('/reset', (req, res) => {
+  Project.reset();
+  res.redirect('/projects');
+});
+
 module.exports = router;
