@@ -5,6 +5,7 @@ const Volunteer = require('../models/Volunteer');
 // List all volunteer opportunities
 router.get('/', (req, res) => {
   const volunteers = Volunteer.getAll();
+  console.log("Volunteers:", volunteers);
   res.render('volunteers', { volunteers });
 });
 

@@ -5,6 +5,7 @@ const Project = require('../models/Project');
 // List all projects
 router.get('/', (req, res) => {
   const projects = Project.getAll();
+  console.log("Projects:", projects);
   res.render('projects', { projects });
 });
 
