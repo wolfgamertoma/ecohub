@@ -15,3 +15,4 @@ class Volunteer {
 }
 
 module.exports = Volunteer;
+
