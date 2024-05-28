@@ -5,7 +5,6 @@ const Volunteer = require('../models/Volunteer');
 // List all volunteer opportunities
 router.get('/', (req, res) => {
   const volunteers = Volunteer.getAll();
-  console.log("Volunteers:", volunteers);
   res.render('volunteers', { volunteers });
 });
 
@@ -18,7 +17,6 @@ router.get('/new', (req, res) => {
 router.post('/', (req, res) => {
   const { title, description, location, date } = req.body;
   Volunteer.save({ title, description, location, date });
-  console.log("Submitted new volunteer:", { title, description, location, date });
   res.redirect('/volunteers');
 });
 
@@ -29,6 +27,7 @@ router.post('/reset', (req, res) => {
 });
 
 module.exports = router;
+
 
 
 

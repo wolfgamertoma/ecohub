@@ -5,7 +5,6 @@ const Project = require('../models/Project');
 // List all projects
 router.get('/', (req, res) => {
   const projects = Project.getAll();
-  console.log("Projects:", projects);
   res.render('projects', { projects });
 });
 
@@ -18,7 +17,6 @@ router.get('/new', (req, res) => {
 router.post('/', (req, res) => {
   const { title, description, location, date } = req.body;
   Project.save({ title, description, location, date });
-  console.log("Submitted new project:", { title, description, location, date });
   res.redirect('/projects');
 });
 
