@@ -9,7 +9,7 @@ const readData = (fileName) => {
   const filePath = getFilePath(fileName);
   try {
     if (!fs.existsSync(filePath)) {
-      return [];
+      fs.writeFileSync(filePath, '[]', 'utf8'); // Create file if it doesn't exist
     }
     const data = fs.readFileSync(filePath, 'utf8');
     console.log(`Read data from ${fileName}:`, data);
